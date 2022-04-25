@@ -6,10 +6,13 @@ using System.Threading.Tasks;
 
 namespace AlgDS_Praktikum_Gruppe9
 {
-    internal class Program
+    class Program
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Branch Aktualisieren");
+            Console.WriteLine("Hallo Welt");
+            Console.WriteLine("Neuer Test");
         }
     }
 }
