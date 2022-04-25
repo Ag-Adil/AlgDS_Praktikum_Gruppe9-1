@@ -5,9 +5,9 @@ ToDo's:
 
 Leitfaden
 - Git repository
+- Programmiersprache
 - Scrum Modell zur Planung
 - Absprache pushen testen etc
-- Programmiersprache
-- Aufgabenverteilung (Skillset)
+- Aufgabenverteilung
 - Klassenhirachie
 - Gemeinsamer Programmiertermin ?
