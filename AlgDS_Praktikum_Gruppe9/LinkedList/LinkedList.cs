@@ -10,5 +10,6 @@ namespace AlgDS_Praktikum_Gruppe9
     {
         // Doppelt verkettete Liste implementieren
         // Indexer Funktion implementieren
+        // Letzter Test
     }
 }
