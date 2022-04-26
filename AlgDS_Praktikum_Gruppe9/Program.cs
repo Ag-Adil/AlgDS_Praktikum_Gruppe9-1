@@ -10,9 +10,7 @@ namespace AlgDS_Praktikum_Gruppe9
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Branch Aktualisieren");
-            Console.WriteLine("Hallo Welt");
-            Console.WriteLine("Neuer Test");
+            Console.WriteLine("Prakikum Gruppe 9");
             Console.ReadKey();
         }
     }
