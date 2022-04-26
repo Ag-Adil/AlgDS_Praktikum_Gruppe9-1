@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace AlgDS_Praktikum_Gruppe9
 {
-    class SetSortedLinkedList : LinkedList, ISetSorted
+    class MultiSetUnsortedLinkedList : LinkedList, IMultiSetUnsorted
     {
+        int size = 0;
         public bool search(int elem)
         {
             return true;
@@ -19,7 +20,8 @@ namespace AlgDS_Praktikum_Gruppe9
 
         public bool insert(int elem)
         {
-            // Test Logik von MultiSetUnsortetLinkedList übernommen
+            // einfache add funktion, element wird am ende eingefügt
+            size++;
             Node node = new Node();
             node.inhalt = elem;
             if (head == null)

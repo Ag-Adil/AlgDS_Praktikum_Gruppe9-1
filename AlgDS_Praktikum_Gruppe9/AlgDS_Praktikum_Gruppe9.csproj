@@ -49,9 +49,12 @@
     <Compile Include="Interfaces\ISetSorted.cs" />
     <Compile Include="Interfaces\ISetUnsorted.cs" />
     <Compile Include="LinkedList\LinkedList.cs" />
+    <Compile Include="LinkedList\MultiSetSortedLinkedList.cs" />
+    <Compile Include="LinkedList\MultiSetUnsortedLinkedList.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="LinkedList\SetSortedLinkedList.cs" />
+    <Compile Include="LinkedList\SetUnsortedLinkedList.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
