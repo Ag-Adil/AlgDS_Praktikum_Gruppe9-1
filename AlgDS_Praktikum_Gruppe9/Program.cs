@@ -13,6 +13,7 @@ namespace AlgDS_Praktikum_Gruppe9
             Console.WriteLine("Branch Aktualisieren");
             Console.WriteLine("Hallo Welt");
             Console.WriteLine("Neuer Test");
+            Console.ReadKey();
         }
     }
 }
