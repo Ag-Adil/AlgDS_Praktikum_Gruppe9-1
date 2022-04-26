@@ -9,5 +9,6 @@ namespace AlgDS_Praktikum_Gruppe9
     class LinkedList
     {
         // Doppelt verkettete Liste implementieren
+        // Indexer Funktion implementieren
     }
 }
