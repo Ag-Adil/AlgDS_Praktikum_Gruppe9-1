@@ -43,8 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\IDictionary.cs" />
+    <Compile Include="Interfaces\IMultiSetSorted.cs" />
+    <Compile Include="Interfaces\IMultiSetUnsorted.cs" />
+    <Compile Include="Interfaces\ISetSorted.cs" />
+    <Compile Include="Interfaces\ISetUnsorted.cs" />
+    <Compile Include="LinkedList\LinkedList.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="LinkedList\SetSortedLinkedList.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
