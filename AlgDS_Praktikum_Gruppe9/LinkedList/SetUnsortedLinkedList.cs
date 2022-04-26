@@ -6,25 +6,48 @@ using System.Threading.Tasks;
 
 namespace AlgDS_Praktikum_Gruppe9
 {
-    class SetUnsortedLinkedList : LinkedList
+    class SetUnsortedLinkedList : MultiSetUnsortedLinkedList
     {
-        public bool search(int elem)
-        {
-            return true;
-        }
-        public bool delete(int elem)
-        {
-            return true;
-        }
-
-        public bool insert(int elem)
+        // wird nicht benötigt wird von der elternklasse verwendent
+        //public bool search(int elem)
+        //{
+        //    return true;
+        //}
+        public new bool delete(int elem)
         {
             return true;
         }
 
-        public void print()
+        public new bool insert(int elem)
         {
-            Console.WriteLine(insert(1));
+            if (search(elem) == true)
+            {
+                return false;
+            }
+            else
+            {
+                Node node = new Node();
+                node.inhalt = elem;
+                if (head == null)
+                {
+                    head = node;
+                }
+                else
+                {
+                    current = head;
+                    while (current.next != null)
+                    {
+                        current = current.next;
+                    }
+                    current.next = node;
+                }
+            }
+            return true;
         }
+        // print wird nicht benötigt wird von der elternklasse Aufgerufen
+        //public void print()
+        //{
+        //    Console.WriteLine(insert(1));
+        //}
     }
 }

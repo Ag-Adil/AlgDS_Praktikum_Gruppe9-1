@@ -11,7 +11,29 @@ namespace AlgDS_Praktikum_Gruppe9
         int size = 0;
         public bool search(int elem)
         {
-            return true;
+            // kann von der theorie in der elternklasse implementiert werden
+            // dafür muss dann aber ein index angelegt werden um deleten an der richtigen stelle durchzuführen
+            if (head == null)
+            {
+                return false;
+            }
+            if (head.inhalt == elem)
+            {
+                return true;
+            }
+            else
+            {
+                current = head;
+                while (current.next != null)
+                {
+                    if (current.inhalt == elem)
+                    {
+                        return true;
+                    }
+                    current = current.next;
+                }
+            }
+            return false;
         }
         public bool delete(int elem)
         {

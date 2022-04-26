@@ -21,11 +21,9 @@ namespace AlgDS_Praktikum_Gruppe9
         {
             public int inhalt;
             public Node next;
-            public Node prev;
         }
         protected Node head;
         protected Node current;
-        protected Node foot;
 
         protected string Ausgabe()
         {
@@ -41,7 +39,7 @@ namespace AlgDS_Praktikum_Gruppe9
             }
             else
             {
-                while (node.next != null)
+                while (node != null)
                 {
                     ausgabe += $"{node.inhalt} ";
                     node = node.next;
