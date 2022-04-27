@@ -10,10 +10,21 @@ namespace AlgDS_Praktikum_Gruppe9
     {
         static void Main(string[] args)
         {
+            // Implementierung einer abfrage für die Bedienung der Software möglich über switch case etc 
             Console.WriteLine("Prakikum Gruppe 9");
-            //MultiSetUnsortedLinkedList multiSetUnsortedLinkedList = new MultiSetUnsortedLinkedList();
+            Console.Write("Welche Funktion möchten Sie bedienen \n1: MultiSetUnsorted \nIhre Eingabe: ");
+            string eingabe = Console.ReadLine();
+            int auswahl = Convert.ToInt32(eingabe);
+            switch (auswahl)
+            {
+                case 1:
+                    TestMultiSetUnsortedLinkedList();
+                    break;
+                default:
+                    break;
+            }
+            Console.WriteLine();
             TestMultiSetUnsortedLinkedList();
-            //SetSortedLinkedList setSortedLinkedList = new SetSortedLinkedList();
             TestSetUnsortedLinkedList();
             TestSetSortedLinkedList();
             Console.ReadKey();
