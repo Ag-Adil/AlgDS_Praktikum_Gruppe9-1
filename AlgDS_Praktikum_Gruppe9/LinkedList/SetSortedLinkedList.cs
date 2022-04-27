@@ -8,14 +8,7 @@ namespace AlgDS_Praktikum_Gruppe9
 {
     class SetSortedLinkedList : MultiSetSortedLinkedList, ISetSorted
     {
-        //public bool search(int elem)
-        //{
-        //    return Suchen(elem);
-        //}
-        //public bool delete(int elem)
-        //{
-        //    return true;
-        //}
+        
 
         public new bool insert(int elem)
         {
@@ -72,10 +65,5 @@ namespace AlgDS_Praktikum_Gruppe9
             }
 
         }
-
-        //public void print()
-        //{
-        //    Console.WriteLine(Ausgabe());
-        //}
     }
 }

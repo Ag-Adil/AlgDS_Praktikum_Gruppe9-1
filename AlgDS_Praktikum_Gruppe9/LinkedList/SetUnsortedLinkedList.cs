@@ -8,16 +8,6 @@ namespace AlgDS_Praktikum_Gruppe9
 {
     class SetUnsortedLinkedList : MultiSetUnsortedLinkedList, ISetUnsorted
     {
-        // wird nicht benötigt wird von der elternklasse verwendent
-        //public bool search(int elem)
-        //{
-        //    return true;
-        //}
-        //public new bool delete(int elem)
-        //{
-        //    return true;
-        //}
-
         public new bool insert(int elem)
         {
             if (search(elem) == true)
@@ -44,10 +34,5 @@ namespace AlgDS_Praktikum_Gruppe9
             }
             return true;
         }
-        // print wird nicht benötigt wird von der elternklasse Aufgerufen
-        //public void print()
-        //{
-        //    Console.WriteLine(insert(1));
-        //}
     }
 }

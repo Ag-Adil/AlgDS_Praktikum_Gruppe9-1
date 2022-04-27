@@ -15,6 +15,7 @@ namespace AlgDS_Praktikum_Gruppe9
             Console.Write("Welche Funktion möchten Sie bedienen \n1: MultiSetUnsorted \n2: SetUnsorted \n3: MultiSetSorted \n4: SetSorted \nIhre Eingabe: ");
             string eingabe = Console.ReadLine();
             int auswahl = Convert.ToInt32(eingabe);
+            Console.Clear();
             switch (auswahl)
             {
                 case 1:
@@ -41,6 +42,7 @@ namespace AlgDS_Praktikum_Gruppe9
             Console.Write("Welche Funktion möchten Sie bedienen \n1: LinkedList \n2: Array \nIhre Eingabe: ");
             string eingabe = Console.ReadLine();
             int auswahl = Convert.ToInt32(eingabe);
+            Console.Clear();
             switch (auswahl)
             {
                 case 1:
@@ -56,6 +58,7 @@ namespace AlgDS_Praktikum_Gruppe9
             Console.Write("Welche Funktion möchten Sie bedienen \n1: LinkedList \n2: Array \nIhre Eingabe: ");
             string eingabe = Console.ReadLine();
             int auswahl = Convert.ToInt32(eingabe);
+            Console.Clear();
             switch (auswahl)
             {
                 case 1:
@@ -73,6 +76,7 @@ namespace AlgDS_Praktikum_Gruppe9
             Console.Write("Welche Funktion möchten Sie bedienen \n1: LinkedList \n2: Array \nIhre Eingabe: ");
             string eingabe = Console.ReadLine();
             int auswahl = Convert.ToInt32(eingabe);
+            Console.Clear();
             switch (auswahl)
             {
                 case 1:
@@ -88,6 +92,7 @@ namespace AlgDS_Praktikum_Gruppe9
             Console.Write("Welche Funktion möchten Sie bedienen \n1: LinkedList \n2: Array \nIhre Eingabe: ");
             string eingabe = Console.ReadLine();
             int auswahl = Convert.ToInt32(eingabe);
+            Console.Clear();
             switch (auswahl)
             {
                 case 1:
@@ -151,6 +156,8 @@ namespace AlgDS_Praktikum_Gruppe9
             multiSetUnsortedLinkedList.insert(4);
             multiSetUnsortedLinkedList.insert(4);
             multiSetUnsortedLinkedList.insert(2);
+            Console.WriteLine(multiSetUnsortedLinkedList.search(4));
+            Console.WriteLine(multiSetUnsortedLinkedList.search(22));
             multiSetUnsortedLinkedList.print();
             multiSetUnsortedLinkedList.delete(5);
             multiSetUnsortedLinkedList.print();
