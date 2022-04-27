@@ -10,9 +10,82 @@ namespace AlgDS_Praktikum_Gruppe9
     {
         static void Main(string[] args)
         {
-            // Implementierung einer abfrage für die Bedienung der Software möglich über switch case etc 
+            // Implementierung einer abfrage für die Bedienung der Software möglich über switch case etc -> muss vervollständigt werden 
             Console.WriteLine("Prakikum Gruppe 9");
-            Console.Write("Welche Funktion möchten Sie bedienen \n1: MultiSetUnsorted \nIhre Eingabe: ");
+            Console.Write("Welche Funktion möchten Sie bedienen \n1: MultiSetUnsorted \n2: SetUnsorted \n3: MultiSetSorted \n4: SetSorted \nIhre Eingabe: ");
+            string eingabe = Console.ReadLine();
+            int auswahl = Convert.ToInt32(eingabe);
+            switch (auswahl)
+            {
+                case 1:
+                    TestMultiSetUnsorted();
+                    break;
+                case 2:
+                    TestSetUnsorted();
+                    break;
+                case 3:
+                    TestMultiSetSorted();
+                    break;
+                case 4:
+                    TestSetSorted();
+                    break;
+                default:
+                    break;
+            }
+            Console.WriteLine();;
+            Console.ReadKey();
+        }
+
+        private static void TestSetSorted()
+        {
+            Console.Write("Welche Funktion möchten Sie bedienen \n1: LinkedList \n2: Array \nIhre Eingabe: ");
+            string eingabe = Console.ReadLine();
+            int auswahl = Convert.ToInt32(eingabe);
+            switch (auswahl)
+            {
+                case 1:
+                    TestSetSortedLinkedList();
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private static void TestMultiSetSorted()
+        {
+            Console.Write("Welche Funktion möchten Sie bedienen \n1: LinkedList \n2: Array \nIhre Eingabe: ");
+            string eingabe = Console.ReadLine();
+            int auswahl = Convert.ToInt32(eingabe);
+            switch (auswahl)
+            {
+                case 1:
+                    TestMultiSetSortedLinkedList();
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        
+
+        private static void TestSetUnsorted()
+        {
+            Console.Write("Welche Funktion möchten Sie bedienen \n1: LinkedList \n2: Array \nIhre Eingabe: ");
+            string eingabe = Console.ReadLine();
+            int auswahl = Convert.ToInt32(eingabe);
+            switch (auswahl)
+            {
+                case 1:
+                    TestSetUnsortedLinkedList();
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private static void TestMultiSetUnsorted()
+        {
+            Console.Write("Welche Funktion möchten Sie bedienen \n1: LinkedList \n2: Array \nIhre Eingabe: ");
             string eingabe = Console.ReadLine();
             int auswahl = Convert.ToInt32(eingabe);
             switch (auswahl)
@@ -23,16 +96,13 @@ namespace AlgDS_Praktikum_Gruppe9
                 default:
                     break;
             }
-            Console.WriteLine();
-            TestMultiSetUnsortedLinkedList();
-            TestSetUnsortedLinkedList();
-            TestSetSortedLinkedList();
-            Console.ReadKey();
         }
+        public static void TestMultiSetSortedLinkedList()
+        {
 
+        }
         public static void TestSetSortedLinkedList()
         {
-            Console.WriteLine("SetSortedLinkedList:");
             SetSortedLinkedList setSortedLinkedList = new SetSortedLinkedList();
             setSortedLinkedList.insert(7);
             setSortedLinkedList.insert(11);
