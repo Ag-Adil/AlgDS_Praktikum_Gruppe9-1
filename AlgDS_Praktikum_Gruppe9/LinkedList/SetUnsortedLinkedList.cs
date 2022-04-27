@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace AlgDS_Praktikum_Gruppe9
 {
-    class SetUnsortedLinkedList : MultiSetUnsortedLinkedList
+    class SetUnsortedLinkedList : MultiSetUnsortedLinkedList, ISetUnsorted
     {
         // wird nicht benötigt wird von der elternklasse verwendent
         //public bool search(int elem)
         //{
         //    return true;
         //}
-        public new bool delete(int elem)
-        {
-            return true;
-        }
+        //public new bool delete(int elem)
+        //{
+        //    return true;
+        //}
 
         public new bool insert(int elem)
         {

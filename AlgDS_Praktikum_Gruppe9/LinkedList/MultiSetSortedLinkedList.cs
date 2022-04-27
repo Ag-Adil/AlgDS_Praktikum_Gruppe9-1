@@ -10,7 +10,7 @@ namespace AlgDS_Praktikum_Gruppe9
     {
         public bool search(int elem)
         {
-            return true;
+            return Suchen(elem);
         }
         public bool delete(int elem)
         {
@@ -24,7 +24,7 @@ namespace AlgDS_Praktikum_Gruppe9
 
         public void print()
         {
-            Console.WriteLine(insert(1));
+            Console.WriteLine(Ausgabe());
         }
     }
 }

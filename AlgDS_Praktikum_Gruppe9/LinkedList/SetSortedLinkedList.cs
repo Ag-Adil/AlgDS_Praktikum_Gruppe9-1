@@ -6,20 +6,20 @@ using System.Threading.Tasks;
 
 namespace AlgDS_Praktikum_Gruppe9
 {
-    class SetSortedLinkedList : LinkedList, ISetSorted
+    class SetSortedLinkedList : MultiSetSortedLinkedList, ISetSorted
     {
-        public bool search(int elem)
-        {
-            return true;
-        }
-        public bool delete(int elem)
-        {
-            return true;
-        }
+        //public bool search(int elem)
+        //{
+        //    return Suchen(elem);
+        //}
+        //public bool delete(int elem)
+        //{
+        //    return true;
+        //}
 
-        public bool insert(int elem)
+        public new bool insert(int elem)
         {
-            // Test Logik von MultiSetUnsortetLinkedList übernommen
+            // Logik funktioniert noch nicht -> muss überarbeitet werden
             Node node = new Node();
             node.inhalt = elem;
             if (head == null)
@@ -31,16 +31,24 @@ namespace AlgDS_Praktikum_Gruppe9
                 current = head;
                 while (current.next != null)
                 {
-                    current = current.next;
+                    if (current.next.inhalt >= node.inhalt)
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        current = current.next;
+                    }
                 }
                 current.next = node;
+                
             }
             return true;
         }
 
-        public void print()
-        {
-            Console.WriteLine(Ausgabe());
-        }
+        //public void print()
+        //{
+        //    Console.WriteLine(Ausgabe());
+        //}
     }
 }

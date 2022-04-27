@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="AlgDS_Praktikum_Gruppe9.LinkedList" Collapsed="true">
+    <Position X="2.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAAAAAAAAAAAAgAAAAAACAAAACAAAAAA=</HashCode>
+      <FileName>LinkedList\LinkedList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AlgDS_Praktikum_Gruppe9.MultiSetSortedLinkedList" Collapsed="true">
+    <Position X="0.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAABAAAAAAAAAAQAAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>LinkedList\MultiSetSortedLinkedList.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="AlgDS_Praktikum_Gruppe9.MultiSetUnsortedLinkedList" Collapsed="true">
+    <Position X="3" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAABAAAAAAIAAAQAAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>LinkedList\MultiSetUnsortedLinkedList.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="AlgDS_Praktikum_Gruppe9.SetSortedLinkedList" Collapsed="true">
+    <Position X="0.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LinkedList\SetSortedLinkedList.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="AlgDS_Praktikum_Gruppe9.SetUnsortedLinkedList" Collapsed="true">
+    <Position X="2.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LinkedList\SetUnsortedLinkedList.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="AlgDS_Praktikum_Gruppe9.Program" Collapsed="true">
+    <Position X="7" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgEAAAAAAAAAAAAAACAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="AlgDS_Praktikum_Gruppe9.IDictionary" Collapsed="true">
+    <Position X="3.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAABAAAAAAAAAAQAAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IDictionary.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="AlgDS_Praktikum_Gruppe9.IMultiSetSorted" Collapsed="true">
+    <Position X="2.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IMultiSetSorted.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="AlgDS_Praktikum_Gruppe9.IMultiSetUnsorted" Collapsed="true">
+    <Position X="5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IMultiSetUnsorted.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="AlgDS_Praktikum_Gruppe9.ISetSorted" Collapsed="true">
+    <Position X="7.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\ISetSorted.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="AlgDS_Praktikum_Gruppe9.ISetUnsorted" Collapsed="true">
+    <Position X="0.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\ISetUnsorted.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

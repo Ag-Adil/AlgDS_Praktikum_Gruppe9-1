@@ -20,12 +20,37 @@ namespace AlgDS_Praktikum_Gruppe9
         protected class Node
         {
             public int inhalt;
+            public int index;
             public Node next;
         }
         protected Node head;
         protected Node current;
 
-        protected string Ausgabe()
+        protected bool Suchen(int elem) // Hilfsfunktion wird in allen LinkedList Unterklassen verwendet
+        {
+            if (head == null)
+            {
+                return false;
+            }
+            if (head.inhalt == elem)
+            {
+                return true;
+            }
+            else
+            {
+                current = head;
+                while (current.next != null)
+                {
+                    if (current.inhalt == elem)
+                    {
+                        return true;
+                    }
+                    current = current.next;
+                }
+            }
+            return false;
+        }
+        protected string Ausgabe() // Hilfsfunktion wird in allen LinkedList Unterklassen verwendet
         {
             Node node = head;
             string ausgabe = "";

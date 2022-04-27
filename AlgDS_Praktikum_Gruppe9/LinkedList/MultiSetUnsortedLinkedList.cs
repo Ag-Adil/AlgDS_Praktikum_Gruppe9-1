@@ -13,30 +13,31 @@ namespace AlgDS_Praktikum_Gruppe9
         {
             // kann von der theorie in der elternklasse implementiert werden
             // dafür muss dann aber ein index angelegt werden um deleten an der richtigen stelle durchzuführen
-            if (head == null)
-            {
-                return false;
-            }
-            if (head.inhalt == elem)
-            {
-                return true;
-            }
-            else
-            {
-                current = head;
-                while (current.next != null)
-                {
-                    if (current.inhalt == elem)
-                    {
-                        return true;
-                    }
-                    current = current.next;
-                }
-            }
-            return false;
+            
+            return Suchen(elem);
         }
         public bool delete(int elem)
         {
+            // Problem: wenn listen länge kleiner gleich 2
+            while (search(elem))
+            {
+                if (head.inhalt == elem)
+                {
+                    head = head.next;
+                }
+                else
+                {
+                    current = head;
+                    while (current.next != null)
+                    {
+                        if (current.next.inhalt == elem)
+                        {
+                            current.next = current.next.next;
+                        }
+                        current = current.next;
+                    }
+                }
+            }
             return true;
         }
 
@@ -46,6 +47,7 @@ namespace AlgDS_Praktikum_Gruppe9
             size++;
             Node node = new Node();
             node.inhalt = elem;
+            node.index = size;
             if (head == null)
             {
                 head = node;
