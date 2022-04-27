@@ -3,7 +3,7 @@
   <Class Name="AlgDS_Praktikum_Gruppe9.LinkedList" Collapsed="true">
     <Position X="2.75" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAgAAAAAAAAAAAAAAAgAAAAAACAAAACAAAAAA=</HashCode>
+      <HashCode>AAIAAAAIgAAAAAAAAAAAAAAAgAAAAAACAAAACAAAAAA=</HashCode>
       <FileName>LinkedList\LinkedList.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -16,7 +16,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="AlgDS_Praktikum_Gruppe9.MultiSetUnsortedLinkedList" Collapsed="true">
-    <Position X="3" Y="5.25" Width="1.5" />
+    <Position X="2.75" Y="5.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAABAAAAAAIAAAQAAAAAAAAAAACAAAAAAAAA=</HashCode>
       <FileName>LinkedList\MultiSetUnsortedLinkedList.cs</FileName>
@@ -42,7 +42,7 @@
   <Class Name="AlgDS_Praktikum_Gruppe9.Program" Collapsed="true">
     <Position X="7" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAgEAAAAAAAAAAAAAACAAAAAAABAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAgEQCAAAAAAAAIAAACAAAAAgABAIAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>

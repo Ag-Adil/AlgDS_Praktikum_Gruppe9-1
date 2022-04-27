@@ -19,31 +19,58 @@ namespace AlgDS_Praktikum_Gruppe9
 
         public new bool insert(int elem)
         {
-            // Logik funktioniert noch nicht -> muss überarbeitet werden
-            Node node = new Node();
-            node.inhalt = elem;
-            if (head == null)
+            if (search(elem) == false)
             {
-                head = node;
-            }
-            else
-            {
-                current = head;
-                while (current.next != null)
+                // Logik funktioniert noch nicht -> muss überarbeitet werden
+                Node node = new Node();
+                node.inhalt = elem;
+                if (head == null)
                 {
-                    if (current.next.inhalt >= node.inhalt)
+                    head = node;
+                    foot = head;
+                }
+                else
+                {
+                    if (node.inhalt <= head.inhalt)
                     {
-                        break;
+                        Node temp = head;
+                        head = node;
+                        temp.prev = head;
+                        head.next = temp;
                     }
                     else
                     {
-                        current = current.next;
+                        current = head;
+                        while (current.next != null && node.inhalt > current.inhalt)
+                        {
+                            current = current.next;
+                        }
+                        if (current.next == null && node.inhalt >= current.inhalt)
+                        {
+                            Node temp = foot;
+                            foot = node;
+                            temp.next = foot;
+                            foot.prev = temp;
+
+                        }
+                        else
+                        {
+                            Node insert = node;
+                            insert.next = current;
+                            insert.prev = current.prev;
+                            current.prev.next = insert;
+                            current.prev = insert;
+                        }
                     }
+
                 }
-                current.next = node;
-                
+                return true;
             }
-            return true;
+            else
+            {
+                return false;
+            }
+
         }
 
         //public void print()

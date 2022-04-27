@@ -22,9 +22,11 @@ namespace AlgDS_Praktikum_Gruppe9
             public int inhalt;
             public int index;
             public Node next;
+            public Node prev;
         }
         protected Node head;
         protected Node current;
+        protected Node foot;
 
         protected bool Suchen(int elem) // Hilfsfunktion wird in allen LinkedList Unterklassen verwendet
         {
@@ -41,7 +43,7 @@ namespace AlgDS_Praktikum_Gruppe9
                 current = head;
                 while (current.next != null)
                 {
-                    if (current.inhalt == elem)
+                    if (current.next.inhalt == elem)
                     {
                         return true;
                     }
@@ -50,6 +52,29 @@ namespace AlgDS_Praktikum_Gruppe9
             }
             return false;
         }
+        //protected bool Löschen(int elem)
+        //{
+        //    while (Suchen(elem))
+        //    {
+        //        if (head.inhalt == elem)
+        //        {
+        //            head = head.next;
+        //        }
+        //        else
+        //        {
+        //            current = head;
+        //            while (current.next != null)
+        //            {
+        //                if (current.next.inhalt == elem)
+        //                {
+        //                    current.next = current.next.next;
+        //                }
+        //                current = current.next;
+        //            }
+        //        }
+        //    }
+        //    return true;
+        //}
         protected string Ausgabe() // Hilfsfunktion wird in allen LinkedList Unterklassen verwendet
         {
             Node node = head;

@@ -18,7 +18,6 @@ namespace AlgDS_Praktikum_Gruppe9
         }
         public bool delete(int elem)
         {
-            // Problem: wenn listen länge kleiner gleich 2
             while (search(elem))
             {
                 if (head.inhalt == elem)
@@ -39,6 +38,7 @@ namespace AlgDS_Praktikum_Gruppe9
                 }
             }
             return true;
+            //return Löschen(elem);
         }
 
         public bool insert(int elem)
