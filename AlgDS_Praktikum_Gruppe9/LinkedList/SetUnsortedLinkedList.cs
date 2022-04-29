@@ -8,7 +8,7 @@ namespace AlgDS_Praktikum_Gruppe9
 {
     class SetUnsortedLinkedList : MultiSetUnsortedLinkedList, ISetUnsorted
     {
-        public new bool insert(int elem)
+        public override bool insert(int elem)
         {
             if (search(elem) == true)
             {

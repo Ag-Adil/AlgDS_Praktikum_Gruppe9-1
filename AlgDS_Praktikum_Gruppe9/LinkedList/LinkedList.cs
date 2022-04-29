@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AlgDS_Praktikum_Gruppe9
 {
-    class LinkedList : IDictionary
+    abstract class LinkedList : IDictionary
     {
         // Doppelt verkettete Liste implementieren für 
         // SetSorted
@@ -27,6 +27,8 @@ namespace AlgDS_Praktikum_Gruppe9
         protected Node head;
         protected Node current;
         protected Node foot;
+
+        // methode implementieren die bei search ein array anlegt wo alle werte die gesucht werden einen index in ein array anlegen
 
         public bool search(int elem)
         {
@@ -74,13 +76,16 @@ namespace AlgDS_Praktikum_Gruppe9
                     node = node.next;
                 }
             }
-            Console.WriteLine($"Liste: {ausgabe}");
+            if (ausgabe.Length > 1)
+            {
+                Console.WriteLine($"Liste: {ausgabe}");
+            }
         }
 
-        public bool insert(int elem)
-        {
-            throw new NotImplementedException();
-        }
+        public abstract bool insert(int elem);
+        //{
+        //    throw new NotImplementedException();
+        //}
 
         public bool delete(int elem)
         {

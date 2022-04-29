@@ -8,7 +8,7 @@ namespace AlgDS_Praktikum_Gruppe9
 {
     class MultiSetSortedLinkedList : LinkedList, IMultiSetSorted
     {
-        public new bool insert(int elem)
+        public override bool insert(int elem)
         {
             Node node = new Node();
             node.inhalt = elem;
