@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AlgDS_Praktikum_Gruppe9
 {
-    class LinkedList
+    abstract class LinkedList : IDictionary
     {
         // Doppelt verkettete Liste implementieren für 
         // SetSorted
@@ -28,8 +28,12 @@ namespace AlgDS_Praktikum_Gruppe9
         protected Node current;
         protected Node foot;
 
-        protected bool Suchen(int elem) // Hilfsfunktion wird in allen LinkedList Unterklassen verwendet
+        // methode implementieren die bei search ein array anlegt wo alle werte die gesucht werden einen index in ein array anlegen
+
+        public bool search(int elem)
         {
+            // kann von der theorie in der elternklasse implementiert werden
+            // dafür muss dann aber ein index angelegt werden um deleten an der richtigen stelle durchzuführen
             if (head == null)
             {
                 return false;
@@ -52,36 +56,13 @@ namespace AlgDS_Praktikum_Gruppe9
             }
             return false;
         }
-        //protected bool Löschen(int elem)
-        //{
-        //    while (Suchen(elem))
-        //    {
-        //        if (head.inhalt == elem)
-        //        {
-        //            head = head.next;
-        //        }
-        //        else
-        //        {
-        //            current = head;
-        //            while (current.next != null)
-        //            {
-        //                if (current.next.inhalt == elem)
-        //                {
-        //                    current.next = current.next.next;
-        //                }
-        //                current = current.next;
-        //            }
-        //        }
-        //    }
-        //    return true;
-        //}
-        protected string Ausgabe() // Hilfsfunktion wird in allen LinkedList Unterklassen verwendet
+        public void print()
         {
             Node node = head;
             string ausgabe = "";
             if (node == null)
             {
-                return "Leere Liste";
+                Console.WriteLine("Leere Liste");
             }
             else if (node.next == null)
             {
@@ -95,9 +76,40 @@ namespace AlgDS_Praktikum_Gruppe9
                     node = node.next;
                 }
             }
-            return ausgabe;
+            if (ausgabe.Length > 1)
+            {
+                Console.WriteLine($"Liste: {ausgabe}");
+            }
         }
 
+        public abstract bool insert(int elem);
+        //{
+        //    throw new NotImplementedException();
+        //}
+
+        public bool delete(int elem)
+        {
+            while (search(elem))
+            {
+                if (head.inhalt == elem)
+                {
+                    head = head.next;
+                }
+                else
+                {
+                    current = head;
+                    while (current.next != null)
+                    {
+                        if (current.next.inhalt == elem)
+                        {
+                            current.next = current.next.next;
+                        }
+                        current = current.next;
+                    }
+                }
+            }
+            return true;
+        }
         // Indexer Funktion implementieren
         // Letzter Test
     }

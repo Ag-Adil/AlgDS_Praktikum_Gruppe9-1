@@ -8,36 +8,7 @@ namespace AlgDS_Praktikum_Gruppe9
 {
     class MultiSetSortedLinkedList : LinkedList, IMultiSetSorted
     {
-        public bool search(int elem)
-        {
-            return Suchen(elem);
-        }
-        public bool delete(int elem)
-        {
-            while (search(elem))
-            {
-                if (head.inhalt == elem)
-                {
-                    head = head.next;
-                }
-                else
-                {
-                    current = head;
-                    while (current.next != null)
-                    {
-                        if (current.next.inhalt == elem)
-                        {
-                            current.next = current.next.next;
-                        }
-                        current = current.next;
-                    }
-                }
-            }
-            return true;
-            //return Löschen(elem);
-        }
-
-        public bool insert(int elem)
+        public override bool insert(int elem)
         {
             Node node = new Node();
             node.inhalt = elem;
@@ -82,11 +53,6 @@ namespace AlgDS_Praktikum_Gruppe9
 
             }
             return true;
-        }
-
-        public void print()
-        {
-            Console.WriteLine(Ausgabe());
         }
     }
 }

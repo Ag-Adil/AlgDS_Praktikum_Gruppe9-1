@@ -12,9 +12,14 @@ namespace AlgDS_Praktikum_Gruppe9
         {
             // Implementierung einer abfrage für die Bedienung der Software möglich über switch case etc -> muss vervollständigt werden 
             Console.WriteLine("Prakikum Gruppe 9");
+            Programmstart();
+        }
+        private static void Programmstart()
+        {
             Console.Write("Welche Funktion möchten Sie bedienen \n1: MultiSetUnsorted \n2: SetUnsorted \n3: MultiSetSorted \n4: SetSorted \nIhre Eingabe: ");
             string eingabe = Console.ReadLine();
             int auswahl = Convert.ToInt32(eingabe);
+            Console.Clear();
             switch (auswahl)
             {
                 case 1:
@@ -32,7 +37,7 @@ namespace AlgDS_Praktikum_Gruppe9
                 default:
                     break;
             }
-            Console.WriteLine();;
+            Console.WriteLine(); ;
             Console.ReadKey();
         }
 
@@ -41,6 +46,7 @@ namespace AlgDS_Praktikum_Gruppe9
             Console.Write("Welche Funktion möchten Sie bedienen \n1: LinkedList \n2: Array \nIhre Eingabe: ");
             string eingabe = Console.ReadLine();
             int auswahl = Convert.ToInt32(eingabe);
+            Console.Clear();
             switch (auswahl)
             {
                 case 1:
@@ -56,6 +62,7 @@ namespace AlgDS_Praktikum_Gruppe9
             Console.Write("Welche Funktion möchten Sie bedienen \n1: LinkedList \n2: Array \nIhre Eingabe: ");
             string eingabe = Console.ReadLine();
             int auswahl = Convert.ToInt32(eingabe);
+            Console.Clear();
             switch (auswahl)
             {
                 case 1:
@@ -73,6 +80,7 @@ namespace AlgDS_Praktikum_Gruppe9
             Console.Write("Welche Funktion möchten Sie bedienen \n1: LinkedList \n2: Array \nIhre Eingabe: ");
             string eingabe = Console.ReadLine();
             int auswahl = Convert.ToInt32(eingabe);
+            Console.Clear();
             switch (auswahl)
             {
                 case 1:
@@ -88,10 +96,11 @@ namespace AlgDS_Praktikum_Gruppe9
             Console.Write("Welche Funktion möchten Sie bedienen \n1: LinkedList \n2: Array \nIhre Eingabe: ");
             string eingabe = Console.ReadLine();
             int auswahl = Convert.ToInt32(eingabe);
+            Console.Clear();
             switch (auswahl)
             {
                 case 1:
-                    TestMultiSetUnsortedLinkedList();
+                    TestMultiSetUnsortedLinkedList1();
                     break;
                 default:
                     break;
@@ -123,29 +132,6 @@ namespace AlgDS_Praktikum_Gruppe9
         public static void TestMultiSetUnsortedLinkedList()
         {
             MultiSetUnsortedLinkedList multiSetUnsortedLinkedList = new MultiSetUnsortedLinkedList();
-            //Console.Write("Wählen Sie eine Funktion: \n1: Einfügen\n2: Löschen\n3: Suchen\n4: Ausgeben \n5: Automatische Liste Generieren");
-            //string eingabe = Console.ReadLine();
-            //int auswahl = Convert.ToInt32(eingabe);
-            //switch (auswahl)
-            //{
-            //    case 1:
-            //        Console.Write("Welchen Wert wollen Sie Einfügen: ");
-            //        string eingabe1 = Console.ReadLine();
-            //        int auswahl1 = Convert.ToInt32(eingabe1);
-            //        multiSetUnsortedLinkedList.insert(auswahl1);
-            //        break;
-            //    case 2:
-            //        TestSetUnsorted();
-            //        break;
-            //    case 3:
-            //        TestMultiSetSorted();
-            //        break;
-            //    case 4:
-            //        TestSetSorted();
-            //        break;
-            //    default:
-            //        break;
-            //}
             multiSetUnsortedLinkedList.insert(3);
             multiSetUnsortedLinkedList.insert(5);
             multiSetUnsortedLinkedList.insert(4);
@@ -172,6 +158,58 @@ namespace AlgDS_Praktikum_Gruppe9
             setUnsortedLinkedList.print();
             setUnsortedLinkedList.delete(4);
             setUnsortedLinkedList.print();
+        }
+        // Interface Methoden eingebaut - Möglicherweise unabhängig von der Listenart bauen
+        public static void TestMultiSetUnsortedLinkedList1()
+        {
+            MultiSetUnsortedLinkedList multiSetUnsortedLinkedList = new MultiSetUnsortedLinkedList();
+            bool repeat = true;
+            while (repeat)
+            {
+                Console.Write("Wählen Sie eine Funktion: \n1: Einfügen\n2: Löschen\n3: Suchen\n4: Ausgeben \n5: Automatische Liste Generieren \n6: Zurück zum Hauptmenü \nIhre Auswahl: ");
+                string eingabe = Console.ReadLine();
+                int auswahl = Convert.ToInt32(eingabe);
+                Console.Clear();
+                switch (auswahl)
+                {
+                    case 1:
+                        Console.Write("Welchen Wert wollen Sie Einfügen: ");
+                        string eingabe1 = Console.ReadLine();
+                        int auswahl1 = Convert.ToInt32(eingabe1);
+                        multiSetUnsortedLinkedList.insert(auswahl1);
+                        break;
+                    case 2:
+                        Console.Write("Welchen Wert wollen Sie Löschen: ");
+                        string eingabe2 = Console.ReadLine();
+                        int auswahl2 = Convert.ToInt32(eingabe2);
+                        multiSetUnsortedLinkedList.delete(auswahl2);
+                        break;
+                    case 3:
+                        Console.Write("Welchen Wert wollen Sie Suchen: ");
+                        string eingabe3 = Console.ReadLine();
+                        int auswahl3 = Convert.ToInt32(eingabe3);
+                        Console.WriteLine(multiSetUnsortedLinkedList.search(auswahl3));
+                        break;
+                    case 4:
+                        multiSetUnsortedLinkedList.print();
+                        break;
+                    case 5:
+                        Console.Write("Wie Lange soll die Generierte Liste sein: ");
+                        string eingabe5 = Console.ReadLine();
+                        int auswahl5 = Convert.ToInt32(eingabe5);
+                        Random rnd = new Random();
+                        for (int i = 0; i < auswahl5; i++)
+                        {
+                            multiSetUnsortedLinkedList.insert(rnd.Next(0, 9));
+                        }
+                        break;
+                    case 6:
+                        Programmstart();
+                        break;
+                    default:
+                        break;
+                }
+            }
         }
     }
 }
