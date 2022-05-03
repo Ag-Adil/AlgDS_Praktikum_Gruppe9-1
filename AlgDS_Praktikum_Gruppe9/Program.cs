@@ -128,29 +128,6 @@ namespace AlgDS_Praktikum_Gruppe9
         public static void TestMultiSetUnsortedLinkedList()
         {
             MultiSetUnsortedLinkedList multiSetUnsortedLinkedList = new MultiSetUnsortedLinkedList();
-            //Console.Write("Wählen Sie eine Funktion: \n1: Einfügen\n2: Löschen\n3: Suchen\n4: Ausgeben \n5: Automatische Liste Generieren");
-            //string eingabe = Console.ReadLine();
-            //int auswahl = Convert.ToInt32(eingabe);
-            //switch (auswahl)
-            //{
-            //    case 1:
-            //        Console.Write("Welchen Wert wollen Sie Einfügen: ");
-            //        string eingabe1 = Console.ReadLine();
-            //        int auswahl1 = Convert.ToInt32(eingabe1);
-            //        multiSetUnsortedLinkedList.insert(auswahl1);
-            //        break;
-            //    case 2:
-            //        TestSetUnsorted();
-            //        break;
-            //    case 3:
-            //        TestMultiSetSorted();
-            //        break;
-            //    case 4:
-            //        TestSetSorted();
-            //        break;
-            //    default:
-            //        break;
-            //}
             multiSetUnsortedLinkedList.insert(3);
             multiSetUnsortedLinkedList.insert(5);
             multiSetUnsortedLinkedList.insert(4);
