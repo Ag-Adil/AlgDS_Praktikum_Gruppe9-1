@@ -12,6 +12,7 @@ namespace AlgDS_Praktikum_Gruppe9
         {
             // Implementierung einer abfrage für die Bedienung der Software möglich über switch case etc -> muss vervollständigt werden 
             Console.WriteLine("Prakikum Gruppe 9");
+            
             Programmstart();
         }
         private static void Programmstart()
@@ -77,7 +78,7 @@ namespace AlgDS_Praktikum_Gruppe9
 
         private static void TestSetUnsorted()
         {
-            Console.Write("Welche Funktion möchten Sie bedienen \n1: LinkedList \n2: Array \nIhre Eingabe: ");
+            Console.Write("Welche Funktion möchten Sie bedienen \n1: LinkedList \n2: HashTabSepChain \nIhre Eingabe: ");
             string eingabe = Console.ReadLine();
             int auswahl = Convert.ToInt32(eingabe);
             Console.Clear();
@@ -85,6 +86,9 @@ namespace AlgDS_Praktikum_Gruppe9
             {
                 case 1:
                     TestSetUnsortedLinkedList();
+                    break;
+                case 2:
+                    TestHashTabSepChain();
                     break;
                 default:
                     break;
@@ -211,6 +215,20 @@ namespace AlgDS_Praktikum_Gruppe9
                         break;
                 }
             }
+        }
+        public static void TestHashTabSepChain()
+        {
+            HashTabSepChain hashTabSepChain = new HashTabSepChain();
+            hashTabSepChain.hilfsfunction();
+            hashTabSepChain.insert(12);
+            hashTabSepChain.insert(56);
+            hashTabSepChain.insert(47);
+            hashTabSepChain.insert(19);
+            hashTabSepChain.insert(89);
+            hashTabSepChain.insert(31);
+            hashTabSepChain.insert(24);
+            hashTabSepChain.insert(79);
+            hashTabSepChain.print();
         }
     }
 }

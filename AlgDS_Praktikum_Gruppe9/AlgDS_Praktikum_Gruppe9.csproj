@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HastTab\HashTabSepChain.cs" />
+    <Compile Include="HastTab\HashTab.cs" />
     <Compile Include="Interfaces\IDictionary.cs" />
     <Compile Include="Interfaces\IMultiSetSorted.cs" />
     <Compile Include="Interfaces\IMultiSetUnsorted.cs" />
