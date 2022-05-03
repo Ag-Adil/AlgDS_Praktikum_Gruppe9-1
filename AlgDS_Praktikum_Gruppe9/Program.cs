@@ -133,6 +133,7 @@ namespace AlgDS_Praktikum_Gruppe9
         {
             MultiSetUnsortedLinkedList multiSetUnsortedLinkedList = new MultiSetUnsortedLinkedList();
             multiSetUnsortedLinkedList.insert(3);
+            multiSetUnsortedLinkedList.insert(6);
             multiSetUnsortedLinkedList.insert(5);
             multiSetUnsortedLinkedList.insert(4);
             multiSetUnsortedLinkedList.insert(4);
