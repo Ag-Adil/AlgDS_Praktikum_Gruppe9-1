@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AlgDS_Praktikum_Gruppe9
 {
-    class HashTab
+    abstract class HashTab
     {
         protected SetUnsortedLinkedList[] setUnsortedLinkedListArray = new SetUnsortedLinkedList[8];
 
@@ -22,6 +22,7 @@ namespace AlgDS_Praktikum_Gruppe9
             {
                 setUnsortedLinkedListArray[i] = new SetUnsortedLinkedList();
             }
+            
         }
 
         

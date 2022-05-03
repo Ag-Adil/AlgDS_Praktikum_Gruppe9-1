@@ -229,6 +229,9 @@ namespace AlgDS_Praktikum_Gruppe9
             hashTabSepChain.insert(24);
             hashTabSepChain.insert(79);
             hashTabSepChain.print();
+            Console.WriteLine(hashTabSepChain.search(32));
+            hashTabSepChain.delete(31);
+            hashTabSepChain.print();
         }
     }
 }
