@@ -12,6 +12,7 @@ namespace AlgDS_Praktikum_Gruppe9
         {
             // Implementierung einer abfrage für die Bedienung der Software möglich über switch case etc -> muss vervollständigt werden 
             Console.WriteLine("Prakikum Gruppe 9");
+            Console.WriteLine();
             Programmstart();
         }
         private static void Programmstart()
@@ -37,7 +38,7 @@ namespace AlgDS_Praktikum_Gruppe9
                 default:
                     break;
             }
-            Console.WriteLine(); ;
+            Console.WriteLine();
             Console.ReadKey();
         }
 
