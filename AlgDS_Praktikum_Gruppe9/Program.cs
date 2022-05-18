@@ -78,7 +78,7 @@ namespace AlgDS_Praktikum_Gruppe9
 
         private static void TestSetUnsorted()
         {
-            Console.Write("Welche Funktion möchten Sie bedienen \n1: LinkedList \n2: HashTabSepChain \nIhre Eingabe: ");
+            Console.Write("Welche Funktion möchten Sie bedienen \n1: LinkedList \n2: HashTabSepChain \n3: HashTabQuadProb \nIhre Eingabe: ");
             string eingabe = Console.ReadLine();
             int auswahl = Convert.ToInt32(eingabe);
             Console.Clear();
@@ -89,6 +89,9 @@ namespace AlgDS_Praktikum_Gruppe9
                     break;
                 case 2:
                     TestHashTabSepChain();
+                    break;
+                case 3:
+                    TestHashTabQuadProb();
                     break;
                 default:
                     break;
@@ -232,6 +235,20 @@ namespace AlgDS_Praktikum_Gruppe9
             Console.WriteLine(hashTabSepChain.search(32));
             hashTabSepChain.delete(31);
             hashTabSepChain.print();
+        }
+        public static void TestHashTabQuadProb()
+        {
+            HashTabQuadProb hashTabQuadProb = new HashTabQuadProb();
+            hashTabQuadProb.insert(12);
+            hashTabQuadProb.insert(56);
+            hashTabQuadProb.insert(47);
+            hashTabQuadProb.insert(89);
+            hashTabQuadProb.insert(31);
+            hashTabQuadProb.insert(82);
+            hashTabQuadProb.insert(10);
+            hashTabQuadProb.insert(11);
+            Console.WriteLine(hashTabQuadProb.search(56));
+            hashTabQuadProb.print();
         }
     }
 }
