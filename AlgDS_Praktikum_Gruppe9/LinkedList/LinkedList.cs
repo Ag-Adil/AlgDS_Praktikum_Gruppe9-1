@@ -27,19 +27,20 @@ namespace AlgDS_Praktikum_Gruppe9
         protected Node head;
         protected Node current;
         protected Node foot;
-
         // methode implementieren die bei search ein array anlegt wo alle werte die gesucht werden einen index in ein array anlegen
 
         public bool search(int elem)
         {
             // kann von der theorie in der elternklasse implementiert werden
             // dafür muss dann aber ein index angelegt werden um deleten an der richtigen stelle durchzuführen
+            
             if (head == null)
             {
                 return false;
             }
             if (head.inhalt == elem)
             {
+                
                 return true;
             }
             else
@@ -51,6 +52,7 @@ namespace AlgDS_Praktikum_Gruppe9
                     {
                         return true;
                     }
+                    
                     current = current.next;
                 }
             }
@@ -109,6 +111,25 @@ namespace AlgDS_Praktikum_Gruppe9
                 }
             }
             return true;
+        }
+        // gibt eine liste der Indexe zurück an welchen sich das gesuchte element befindet
+        public SetSortedLinkedList searchIndex(int elem)
+        {
+            int size = 0;
+            SetSortedLinkedList setSortedLinkedList = new SetSortedLinkedList();
+            Node node = head;
+            while(node != null)
+            {
+                if (node.inhalt == elem)
+                {
+                    setSortedLinkedList.insert(size);
+                }
+                size++;
+                node = node.next;
+            }
+            return setSortedLinkedList;
+
+
         }
         // Indexer Funktion implementieren
         // Letzter Test
