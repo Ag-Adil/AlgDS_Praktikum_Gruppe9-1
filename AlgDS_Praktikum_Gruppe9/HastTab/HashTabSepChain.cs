@@ -45,12 +45,9 @@ namespace AlgDS_Praktikum_Gruppe9
                 return false;
             }
         }
-        
-
         public void print()
         {
-            // ToDo -> eigene print Function schreiben -> schönere Anordnung -> möglicherweise Tabelle
-            for (int i = 0; i < setUnsortedLinkedListArray.Length - 1; i++)
+            for (int i = 0; i < setUnsortedLinkedListArray.Length; i++)
             {
                 setUnsortedLinkedListArray[i].print();
             }

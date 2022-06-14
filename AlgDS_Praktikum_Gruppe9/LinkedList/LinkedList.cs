@@ -64,17 +64,17 @@ namespace AlgDS_Praktikum_Gruppe9
             string ausgabe = "";
             if (node == null)
             {
-                Console.WriteLine("Leere Liste");
+                Console.WriteLine("Liste: ");
             }
             else if (node.next == null)
             {
-                ausgabe += $"{node.inhalt} ";
+                ausgabe += $"{node.inhalt,3} ";
             }
             else
             {
                 while (node != null)
                 {
-                    ausgabe += $"{node.inhalt} ";
+                    ausgabe += $"{node.inhalt,3} ";
                     node = node.next;
                 }
             }

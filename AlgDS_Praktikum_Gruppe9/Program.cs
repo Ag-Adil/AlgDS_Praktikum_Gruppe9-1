@@ -10,7 +10,6 @@ namespace AlgDS_Praktikum_Gruppe9
     {
         static void Main(string[] args)
         {
-            // Implementierung einer abfrage für die Bedienung der Software möglich über switch case etc -> muss vervollständigt werden 
             Console.WriteLine("Prakikum Gruppe 9");
             Console.WriteLine();
             Programmstart();
@@ -41,7 +40,6 @@ namespace AlgDS_Praktikum_Gruppe9
             Console.WriteLine();
             Console.ReadKey();
         }
-
         private static void TestSetSorted()
         {
             Console.Write("Welche Funktion möchten Sie bedienen \n1: LinkedList \n2: Array \nIhre Eingabe: ");
@@ -57,7 +55,6 @@ namespace AlgDS_Praktikum_Gruppe9
                     break;
             }
         }
-
         private static void TestMultiSetSorted()
         {
             Console.Write("Welche Funktion möchten Sie bedienen \n1: LinkedList \n2: Array \nIhre Eingabe: ");
@@ -73,9 +70,6 @@ namespace AlgDS_Praktikum_Gruppe9
                     break;
             }
         }
-
-        
-
         private static void TestSetUnsorted()
         {
             Console.Write("Welche Funktion möchten Sie bedienen \n1: LinkedList \n2: HashTabSepChain \n3: HashTabQuadProb \nIhre Eingabe: ");
@@ -97,7 +91,6 @@ namespace AlgDS_Praktikum_Gruppe9
                     break;
             }
         }
-
         private static void TestMultiSetUnsorted()
         {
             Console.Write("Welche Funktion möchten Sie bedienen \n1: LinkedList \n2: Array \nIhre Eingabe: ");
@@ -215,7 +208,6 @@ namespace AlgDS_Praktikum_Gruppe9
                 }
             }
         }
-
         public static void TestSetUnsortedLinkedList()
         {
             SetUnsortedLinkedList setUnsortedLinkedList = new SetUnsortedLinkedList();
@@ -322,32 +314,107 @@ namespace AlgDS_Praktikum_Gruppe9
         {
             HashTabSepChain hashTabSepChain = new HashTabSepChain();
             hashTabSepChain.hilfsfunction();
-            hashTabSepChain.insert(12);
-            hashTabSepChain.insert(56);
-            hashTabSepChain.insert(47);
-            hashTabSepChain.insert(19);
-            hashTabSepChain.insert(89);
-            hashTabSepChain.insert(31);
-            hashTabSepChain.insert(24);
-            hashTabSepChain.insert(79);
-            hashTabSepChain.print();
-            Console.WriteLine(hashTabSepChain.search(32));
-            hashTabSepChain.delete(31);
-            hashTabSepChain.print();
+            bool repeat = true;
+            while (repeat)
+            {
+                Console.Write("Wählen Sie eine Funktion: \n1: Einfügen\n2: Löschen\n3: Suchen\n4: Ausgeben \n5: Automatische Liste Generieren \n6: Zurück zum Hauptmenü \nIhre Auswahl: ");
+                string eingabe = Console.ReadLine();
+                int auswahl = Convert.ToInt32(eingabe);
+                Console.Clear();
+                switch (auswahl)
+                {
+                    case 1:
+                        Console.Write("Welchen Wert wollen Sie Einfügen: ");
+                        string eingabe1 = Console.ReadLine();
+                        int auswahl1 = Convert.ToInt32(eingabe1);
+                        hashTabSepChain.insert(auswahl1);
+                        break;
+                    case 2:
+                        Console.Write("Welchen Wert wollen Sie Löschen: ");
+                        string eingabe2 = Console.ReadLine();
+                        int auswahl2 = Convert.ToInt32(eingabe2);
+                        hashTabSepChain.delete(auswahl2);
+                        break;
+                    case 3:
+                        Console.Write("Welchen Wert wollen Sie Suchen: ");
+                        string eingabe3 = Console.ReadLine();
+                        int auswahl3 = Convert.ToInt32(eingabe3);
+                        Console.WriteLine(hashTabSepChain.search(auswahl3));
+                        break;
+                    case 4:
+                        hashTabSepChain.print();
+                        break;
+                    case 5:
+                        Console.Write("Wie Lange soll die Generierte Liste sein: ");
+                        string eingabe5 = Console.ReadLine();
+                        int auswahl5 = Convert.ToInt32(eingabe5);
+                        Random rnd = new Random();
+                        for (int i = 0; i < auswahl5; i++)
+                        {
+                            int zufall = rnd.Next(0, 99);
+                            hashTabSepChain.insert(zufall);
+                        }
+                        break;
+                    case 6:
+                        Programmstart();
+                        break;
+                    default:
+                        break;
+                }
+            }
         }
         public static void TestHashTabQuadProb()
         {
             HashTabQuadProb hashTabQuadProb = new HashTabQuadProb();
-            hashTabQuadProb.insert(12);
-            hashTabQuadProb.insert(56);
-            hashTabQuadProb.insert(47);
-            hashTabQuadProb.insert(89);
-            hashTabQuadProb.insert(31);
-            hashTabQuadProb.insert(82);
-            hashTabQuadProb.insert(10);
-            hashTabQuadProb.insert(11);
-            Console.WriteLine(hashTabQuadProb.search(56));
-            hashTabQuadProb.print();
+            bool repeat = true;
+            while (repeat)
+            {
+                Console.Write("Wählen Sie eine Funktion: \n1: Einfügen\n2: Löschen\n3: Suchen\n4: Ausgeben \n5: Automatische Liste Generieren \n6: Zurück zum Hauptmenü \nIhre Auswahl: ");
+                string eingabe = Console.ReadLine();
+                int auswahl = Convert.ToInt32(eingabe);
+                Console.Clear();
+                switch (auswahl)
+                {
+                    case 1:
+                        Console.Write("Welchen Wert wollen Sie Einfügen: ");
+                        string eingabe1 = Console.ReadLine();
+                        int auswahl1 = Convert.ToInt32(eingabe1);
+                        hashTabQuadProb.insert(auswahl1);
+                        break;
+                    case 2:
+                        Console.Write("Welchen Wert wollen Sie Löschen: ");
+                        string eingabe2 = Console.ReadLine();
+                        int auswahl2 = Convert.ToInt32(eingabe2);
+                        hashTabQuadProb.delete(auswahl2);
+                        break;
+                    case 3:
+                        Console.Write("Welchen Wert wollen Sie Suchen: ");
+                        string eingabe3 = Console.ReadLine();
+                        int auswahl3 = Convert.ToInt32(eingabe3);
+                        Console.WriteLine(hashTabQuadProb.search(auswahl3));
+                        break;
+                    case 4:
+                        hashTabQuadProb.print();
+                        break;
+                    case 5:
+                        Console.Write("Wie Lange soll die Generierte Liste sein: ");
+                        string eingabe5 = Console.ReadLine();
+                        int auswahl5 = Convert.ToInt32(eingabe5);
+                        Random rnd = new Random();
+                        for (int i = 0; i < auswahl5; i++)
+                        {
+                            int zufall = rnd.Next(0, 99);
+                            hashTabQuadProb.insert(zufall);
+                            Console.WriteLine("JST " + zufall);
+                        }
+                        break;
+                    case 6:
+                        Programmstart();
+                        break;
+                    default:
+                        break;
+                }
+            }
         }
     }
 }
