@@ -10,7 +10,6 @@ namespace AlgDS_Praktikum_Gruppe9
     {
         static void Main(string[] args)
         {
-            // Implementierung einer abfrage für die Bedienung der Software möglich über switch case etc -> muss vervollständigt werden 
             Console.WriteLine("Prakikum Gruppe 9");
             Console.WriteLine();
             Programmstart();
@@ -41,7 +40,6 @@ namespace AlgDS_Praktikum_Gruppe9
             Console.WriteLine();
             Console.ReadKey();
         }
-
         private static void TestSetSorted()
         {
             Console.Write("Welche Funktion möchten Sie bedienen \n1: LinkedList \n2: Array \nIhre Eingabe: ");
@@ -57,7 +55,6 @@ namespace AlgDS_Praktikum_Gruppe9
                     break;
             }
         }
-
         private static void TestMultiSetSorted()
         {
             Console.Write("Welche Funktion möchten Sie bedienen \n1: LinkedList \n2: Array \nIhre Eingabe: ");
@@ -73,9 +70,6 @@ namespace AlgDS_Praktikum_Gruppe9
                     break;
             }
         }
-
-        
-
         private static void TestSetUnsorted()
         {
             Console.Write("Welche Funktion möchten Sie bedienen \n1: LinkedList \n2: HashTabSepChain \n3: HashTabQuadProb \nIhre Eingabe: ");
@@ -97,7 +91,6 @@ namespace AlgDS_Praktikum_Gruppe9
                     break;
             }
         }
-
         private static void TestMultiSetUnsorted()
         {
             Console.Write("Welche Funktion möchten Sie bedienen \n1: LinkedList \n2: Array \nIhre Eingabe: ");
@@ -107,7 +100,7 @@ namespace AlgDS_Praktikum_Gruppe9
             switch (auswahl)
             {
                 case 1:
-                    TestMultiSetUnsortedLinkedList1();
+                    TestMultiSetUnsortedLinkedList();
                     break;
                 default:
                     break;
@@ -116,59 +109,157 @@ namespace AlgDS_Praktikum_Gruppe9
         public static void TestMultiSetSortedLinkedList()
         {
             MultiSetSortedLinkedList multiSetSortedLinkedList = new MultiSetSortedLinkedList();
-            multiSetSortedLinkedList.insert(2);
-            multiSetSortedLinkedList.insert(2);
-            multiSetSortedLinkedList.insert(6);
-            multiSetSortedLinkedList.insert(4);
-            multiSetSortedLinkedList.insert(4);
-            multiSetSortedLinkedList.delete(4);
-            multiSetSortedLinkedList.print();
+            bool repeat = true;
+            while (repeat)
+            {
+                Console.Write("Wählen Sie eine Funktion: \n1: Einfügen\n2: Löschen\n3: Suchen\n4: Ausgeben \n5: Automatische Liste Generieren \n6: Zurück zum Hauptmenü \nIhre Auswahl: ");
+                string eingabe = Console.ReadLine();
+                int auswahl = Convert.ToInt32(eingabe);
+                Console.Clear();
+                switch (auswahl)
+                {
+                    case 1:
+                        Console.Write("Welchen Wert wollen Sie Einfügen: ");
+                        string eingabe1 = Console.ReadLine();
+                        int auswahl1 = Convert.ToInt32(eingabe1);
+                        multiSetSortedLinkedList.insert(auswahl1);
+                        break;
+                    case 2:
+                        Console.Write("Welchen Wert wollen Sie Löschen: ");
+                        string eingabe2 = Console.ReadLine();
+                        int auswahl2 = Convert.ToInt32(eingabe2);
+                        multiSetSortedLinkedList.delete(auswahl2);
+                        break;
+                    case 3:
+                        Console.Write("Welchen Wert wollen Sie Suchen: ");
+                        string eingabe3 = Console.ReadLine();
+                        int auswahl3 = Convert.ToInt32(eingabe3);
+                        Console.WriteLine(multiSetSortedLinkedList.search(auswahl3));
+                        break;
+                    case 4:
+                        multiSetSortedLinkedList.print();
+                        break;
+                    case 5:
+                        Console.Write("Wie Lange soll die Generierte Liste sein: ");
+                        string eingabe5 = Console.ReadLine();
+                        int auswahl5 = Convert.ToInt32(eingabe5);
+                        Random rnd = new Random();
+                        for (int i = 0; i < auswahl5; i++)
+                        {
+                            multiSetSortedLinkedList.insert(rnd.Next(0, 9));
+                        }
+                        break;
+                    case 6:
+                        Programmstart();
+                        break;
+                    default:
+                        break;
+                }
+            }
         }
         public static void TestSetSortedLinkedList()
         {
             SetSortedLinkedList setSortedLinkedList = new SetSortedLinkedList();
-            setSortedLinkedList.insert(7);
-            setSortedLinkedList.insert(11);
-            setSortedLinkedList.insert(11);
-            setSortedLinkedList.insert(11);
-            setSortedLinkedList.insert(9);
-            setSortedLinkedList.insert(10);
-            setSortedLinkedList.print();
+            bool repeat = true;
+            while (repeat)
+            {
+                Console.Write("Wählen Sie eine Funktion: \n1: Einfügen\n2: Löschen\n3: Suchen\n4: Ausgeben \n5: Automatische Liste Generieren \n6: Zurück zum Hauptmenü \nIhre Auswahl: ");
+                string eingabe = Console.ReadLine();
+                int auswahl = Convert.ToInt32(eingabe);
+                Console.Clear();
+                switch (auswahl)
+                {
+                    case 1:
+                        Console.Write("Welchen Wert wollen Sie Einfügen: ");
+                        string eingabe1 = Console.ReadLine();
+                        int auswahl1 = Convert.ToInt32(eingabe1);
+                        setSortedLinkedList.insert(auswahl1);
+                        break;
+                    case 2:
+                        Console.Write("Welchen Wert wollen Sie Löschen: ");
+                        string eingabe2 = Console.ReadLine();
+                        int auswahl2 = Convert.ToInt32(eingabe2);
+                        setSortedLinkedList.delete(auswahl2);
+                        break;
+                    case 3:
+                        Console.Write("Welchen Wert wollen Sie Suchen: ");
+                        string eingabe3 = Console.ReadLine();
+                        int auswahl3 = Convert.ToInt32(eingabe3);
+                        Console.WriteLine(setSortedLinkedList.search(auswahl3));
+                        break;
+                    case 4:
+                        setSortedLinkedList.print();
+                        break;
+                    case 5:
+                        Console.Write("Wie Lange soll die Generierte Liste sein: ");
+                        string eingabe5 = Console.ReadLine();
+                        int auswahl5 = Convert.ToInt32(eingabe5);
+                        Random rnd = new Random();
+                        for (int i = 0; i < auswahl5; i++)
+                        {
+                            setSortedLinkedList.insert(rnd.Next(0, 9));
+                        }
+                        break;
+                    case 6:
+                        Programmstart();
+                        break;
+                    default:
+                        break;
+                }
+            }
         }
-
-        public static void TestMultiSetUnsortedLinkedList()
-        {
-            MultiSetUnsortedLinkedList multiSetUnsortedLinkedList = new MultiSetUnsortedLinkedList();
-            multiSetUnsortedLinkedList.insert(3);
-            multiSetUnsortedLinkedList.insert(6);
-            multiSetUnsortedLinkedList.insert(5);
-            multiSetUnsortedLinkedList.insert(4);
-            multiSetUnsortedLinkedList.insert(4);
-            multiSetUnsortedLinkedList.insert(2);
-            multiSetUnsortedLinkedList.print();
-            multiSetUnsortedLinkedList.delete(5);
-            multiSetUnsortedLinkedList.print();
-            multiSetUnsortedLinkedList.delete(4);
-            multiSetUnsortedLinkedList.print();
-            multiSetUnsortedLinkedList.delete(3);
-            multiSetUnsortedLinkedList.print();
-            multiSetUnsortedLinkedList.delete(2);
-            multiSetUnsortedLinkedList.print();
-        }
-
         public static void TestSetUnsortedLinkedList()
         {
             SetUnsortedLinkedList setUnsortedLinkedList = new SetUnsortedLinkedList();
-            setUnsortedLinkedList.insert(4);
-            setUnsortedLinkedList.insert(4);
-            setUnsortedLinkedList.insert(3);
-            setUnsortedLinkedList.insert(2);
-            setUnsortedLinkedList.print();
-            setUnsortedLinkedList.delete(4);
-            setUnsortedLinkedList.print();
+            bool repeat = true;
+            while (repeat)
+            {
+                Console.Write("Wählen Sie eine Funktion: \n1: Einfügen\n2: Löschen\n3: Suchen\n4: Ausgeben \n5: Automatische Liste Generieren \n6: Zurück zum Hauptmenü \nIhre Auswahl: ");
+                string eingabe = Console.ReadLine();
+                int auswahl = Convert.ToInt32(eingabe);
+                Console.Clear();
+                switch (auswahl)
+                {
+                    case 1:
+                        Console.Write("Welchen Wert wollen Sie Einfügen: ");
+                        string eingabe1 = Console.ReadLine();
+                        int auswahl1 = Convert.ToInt32(eingabe1);
+                        setUnsortedLinkedList.insert(auswahl1);
+                        break;
+                    case 2:
+                        Console.Write("Welchen Wert wollen Sie Löschen: ");
+                        string eingabe2 = Console.ReadLine();
+                        int auswahl2 = Convert.ToInt32(eingabe2);
+                        setUnsortedLinkedList.delete(auswahl2);
+                        break;
+                    case 3:
+                        Console.Write("Welchen Wert wollen Sie Suchen: ");
+                        string eingabe3 = Console.ReadLine();
+                        int auswahl3 = Convert.ToInt32(eingabe3);
+                        Console.WriteLine(setUnsortedLinkedList.search(auswahl3));
+                        break;
+                    case 4:
+                        setUnsortedLinkedList.print();
+                        break;
+                    case 5:
+                        Console.Write("Wie Lange soll die Generierte Liste sein: ");
+                        string eingabe5 = Console.ReadLine();
+                        int auswahl5 = Convert.ToInt32(eingabe5);
+                        Random rnd = new Random();
+                        for (int i = 0; i < auswahl5; i++)
+                        {
+                            setUnsortedLinkedList.insert(rnd.Next(0, 9));
+                        }
+                        break;
+                    case 6:
+                        Programmstart();
+                        break;
+                    default:
+                        break;
+                }
+            }
         }
-        // Interface Methoden eingebaut - Möglicherweise unabhängig von der Listenart bauen
-        public static void TestMultiSetUnsortedLinkedList1()
+        public static void TestMultiSetUnsortedLinkedList()
         {
             MultiSetUnsortedLinkedList multiSetUnsortedLinkedList = new MultiSetUnsortedLinkedList();
             bool repeat = true;
@@ -212,8 +303,7 @@ namespace AlgDS_Praktikum_Gruppe9
                         }
                         break;
                     case 6:
-                        multiSetUnsortedLinkedList.searchIndex(3);
-                        //Programmstart();
+                        Programmstart();
                         break;
                     default:
                         break;
@@ -224,32 +314,107 @@ namespace AlgDS_Praktikum_Gruppe9
         {
             HashTabSepChain hashTabSepChain = new HashTabSepChain();
             hashTabSepChain.hilfsfunction();
-            hashTabSepChain.insert(12);
-            hashTabSepChain.insert(56);
-            hashTabSepChain.insert(47);
-            hashTabSepChain.insert(19);
-            hashTabSepChain.insert(89);
-            hashTabSepChain.insert(31);
-            hashTabSepChain.insert(24);
-            hashTabSepChain.insert(79);
-            hashTabSepChain.print();
-            Console.WriteLine(hashTabSepChain.search(32));
-            hashTabSepChain.delete(31);
-            hashTabSepChain.print();
+            bool repeat = true;
+            while (repeat)
+            {
+                Console.Write("Wählen Sie eine Funktion: \n1: Einfügen\n2: Löschen\n3: Suchen\n4: Ausgeben \n5: Automatische Liste Generieren \n6: Zurück zum Hauptmenü \nIhre Auswahl: ");
+                string eingabe = Console.ReadLine();
+                int auswahl = Convert.ToInt32(eingabe);
+                Console.Clear();
+                switch (auswahl)
+                {
+                    case 1:
+                        Console.Write("Welchen Wert wollen Sie Einfügen: ");
+                        string eingabe1 = Console.ReadLine();
+                        int auswahl1 = Convert.ToInt32(eingabe1);
+                        hashTabSepChain.insert(auswahl1);
+                        break;
+                    case 2:
+                        Console.Write("Welchen Wert wollen Sie Löschen: ");
+                        string eingabe2 = Console.ReadLine();
+                        int auswahl2 = Convert.ToInt32(eingabe2);
+                        hashTabSepChain.delete(auswahl2);
+                        break;
+                    case 3:
+                        Console.Write("Welchen Wert wollen Sie Suchen: ");
+                        string eingabe3 = Console.ReadLine();
+                        int auswahl3 = Convert.ToInt32(eingabe3);
+                        Console.WriteLine(hashTabSepChain.search(auswahl3));
+                        break;
+                    case 4:
+                        hashTabSepChain.print();
+                        break;
+                    case 5:
+                        Console.Write("Wie Lange soll die Generierte Liste sein: ");
+                        string eingabe5 = Console.ReadLine();
+                        int auswahl5 = Convert.ToInt32(eingabe5);
+                        Random rnd = new Random();
+                        for (int i = 0; i < auswahl5; i++)
+                        {
+                            int zufall = rnd.Next(0, 99);
+                            hashTabSepChain.insert(zufall);
+                        }
+                        break;
+                    case 6:
+                        Programmstart();
+                        break;
+                    default:
+                        break;
+                }
+            }
         }
         public static void TestHashTabQuadProb()
         {
             HashTabQuadProb hashTabQuadProb = new HashTabQuadProb();
-            hashTabQuadProb.insert(12);
-            hashTabQuadProb.insert(56);
-            hashTabQuadProb.insert(47);
-            hashTabQuadProb.insert(89);
-            hashTabQuadProb.insert(31);
-            hashTabQuadProb.insert(82);
-            hashTabQuadProb.insert(10);
-            hashTabQuadProb.insert(11);
-            Console.WriteLine(hashTabQuadProb.search(56));
-            hashTabQuadProb.print();
+            bool repeat = true;
+            while (repeat)
+            {
+                Console.Write("Wählen Sie eine Funktion: \n1: Einfügen\n2: Löschen\n3: Suchen\n4: Ausgeben \n5: Automatische Liste Generieren \n6: Zurück zum Hauptmenü \nIhre Auswahl: ");
+                string eingabe = Console.ReadLine();
+                int auswahl = Convert.ToInt32(eingabe);
+                Console.Clear();
+                switch (auswahl)
+                {
+                    case 1:
+                        Console.Write("Welchen Wert wollen Sie Einfügen: ");
+                        string eingabe1 = Console.ReadLine();
+                        int auswahl1 = Convert.ToInt32(eingabe1);
+                        hashTabQuadProb.insert(auswahl1);
+                        break;
+                    case 2:
+                        Console.Write("Welchen Wert wollen Sie Löschen: ");
+                        string eingabe2 = Console.ReadLine();
+                        int auswahl2 = Convert.ToInt32(eingabe2);
+                        hashTabQuadProb.delete(auswahl2);
+                        break;
+                    case 3:
+                        Console.Write("Welchen Wert wollen Sie Suchen: ");
+                        string eingabe3 = Console.ReadLine();
+                        int auswahl3 = Convert.ToInt32(eingabe3);
+                        Console.WriteLine(hashTabQuadProb.search(auswahl3));
+                        break;
+                    case 4:
+                        hashTabQuadProb.print();
+                        break;
+                    case 5:
+                        Console.Write("Wie Lange soll die Generierte Liste sein: ");
+                        string eingabe5 = Console.ReadLine();
+                        int auswahl5 = Convert.ToInt32(eingabe5);
+                        Random rnd = new Random();
+                        for (int i = 0; i < auswahl5; i++)
+                        {
+                            int zufall = rnd.Next(0, 99);
+                            hashTabQuadProb.insert(zufall);
+                            Console.WriteLine("JST " + zufall);
+                        }
+                        break;
+                    case 6:
+                        Programmstart();
+                        break;
+                    default:
+                        break;
+                }
+            }
         }
     }
 }

@@ -8,77 +8,94 @@ namespace AlgDS_Praktikum_Gruppe9
 {
     class HashTabQuadProb : HashTab , ISetUnsorted
     {
-        // ToDo: Verdopplungen unterbinden, delete funktion hinzufügen
-        
         public bool delete(int elem)
         {
-            if (search(elem))
+            if (search(elem) == true)
             {
+                for (int i = 0; i < quadProb.Length; i++)
+                {
+                    if (elem == quadProb[i])
+                    {
+                        quadProb[i] = 0;
+                        quadProbVersuche[i] = 0;
+                    }
+                }
                 return true;
             }
             else
             {
+                Console.WriteLine($"Der Wert {elem} kann nicht gelöscht werden, dar er nicht vorhanden ist!");
                 return false;
             }
         }
-
         public bool insert(int elem)
         {
-            int counter = 0;
-            int hashwert = HashIndex(elem);
-            if (quadProbVersuche[hashwert] != 0)
+            try
             {
-                while (quadProbVersuche[Hashfunction1(elem, counter)] != 0)
+                if (search(elem) == false)
                 {
-                    counter++;
+                    int counter = 0;
+                    int hashwert = HashIndex(elem);
+                    if (quadProbVersuche[hashwert] != 0)
+                    {
+                        while (quadProbVersuche[Hashfunction1(elem, counter)] != 0)
+                        {
+                            counter++;
+                        }
+                        quadProbVersuche[Hashfunction1(elem, counter)] = counter + 1;
+                        quadProb[Hashfunction1(elem, counter)] = elem;
+                    }
+                    else
+                    {
+                        quadProbVersuche[hashwert] += 1;
+                        quadProb[hashwert] = elem;
+                    }
+                    return true;
                 }
-                quadProbVersuche[Hashfunction1(elem, counter)] = counter + 1;
-                quadProb[Hashfunction1(elem, counter)] = elem;
+                else
+                {
+                    return false;
+                }
             }
-            else
+            catch (IndexOutOfRangeException)
             {
-                quadProbVersuche[hashwert] += 1;
-                quadProb[hashwert] = elem;
+                Console.WriteLine("Die Hashtabelle ist für einen oder mehrere Werte voll");
+                Program.TestHashTabQuadProb();
+                throw;
             }
-            return true;
-
-
         }
         public void print()
         {
             for (int i = 0; i < quadProb.Length; i++)
             {
-                Console.Write($"{quadProb[i],4}");
+                Console.Write($"{quadProb[i],4}  |");
             }
 
             Console.WriteLine();
+            for (int i = 0; i < (quadProb.Length * 7); i++)
+            {
+                Console.Write("-");
+            }
             Console.WriteLine();
 
             for (int i = 0; i < quadProb.Length; i++)
             {
-                Console.Write($"{quadProbVersuche[i],4}");
+                Console.Write($"{quadProbVersuche[i],4}  |");
             }
-
+            Console.WriteLine();
         }
         public bool search(int elem)
         {
-            int index = HashIndex(elem);
-            int counter = 0;
-            while (counter < quadProb.Length)
+            bool gefunden = false;
+            for (int i = 0; i < quadProb.Length; i++)
             {
-                if (elem == quadProb[index + Convert.ToInt32((c1 * counter) + (c2 * (counter * counter)))])
+                if (elem == quadProb[i])
                 {
-                    return true;
+                    gefunden = true;
+                    break;
                 }
-                else if (quadProbVersuche[Hashfunction1(elem, counter)] == 0 || quadProb[index] == 0)
-                {
-                    return false;
-                }
-                counter++;
             }
-            return false;
+            return gefunden;
         }
-
-        
     }
 }
