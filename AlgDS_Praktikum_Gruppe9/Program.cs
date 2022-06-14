@@ -405,7 +405,6 @@ namespace AlgDS_Praktikum_Gruppe9
                         {
                             int zufall = rnd.Next(0, 99);
                             hashTabQuadProb.insert(zufall);
-                            Console.WriteLine("JST " + zufall);
                         }
                         break;
                     case 6:
