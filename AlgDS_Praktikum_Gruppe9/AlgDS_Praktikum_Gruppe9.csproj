@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bäume\AVLTree.cs" />
+    <Compile Include="Bäume\BinSearchTree.cs" />
     <Compile Include="HastTab\HashTabQuadProb.cs" />
     <Compile Include="HastTab\HashTabSepChain.cs" />
     <Compile Include="HastTab\HashTab.cs" />
@@ -58,6 +60,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="LinkedList\SetSortedLinkedList.cs" />
     <Compile Include="LinkedList\SetUnsortedLinkedList.cs" />
+    <Compile Include="Bäume\Treap.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

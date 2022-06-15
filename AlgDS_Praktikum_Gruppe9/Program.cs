@@ -42,7 +42,7 @@ namespace AlgDS_Praktikum_Gruppe9
         }
         private static void TestSetSorted()
         {
-            Console.Write("Welche Funktion möchten Sie bedienen \n1: LinkedList \n2: Array \nIhre Eingabe: ");
+            Console.Write("Welche Funktion möchten Sie bedienen \n1: LinkedList \n2: Array \n3: BinSearchTree \n4: AVLTree \n5: Treap\nIhre Eingabe: ");
             string eingabe = Console.ReadLine();
             int auswahl = Convert.ToInt32(eingabe);
             Console.Clear();
@@ -50,6 +50,17 @@ namespace AlgDS_Praktikum_Gruppe9
             {
                 case 1:
                     TestSetSortedLinkedList();
+                    break;
+                case 2:
+                    //Teil von Adil fehlt noch.
+                 case 3:
+                    TestBinSearchTree();
+                    break;
+                case 4:
+                    TestAVLTree();
+                    break;
+                case 5:
+                    TestTreap();
                     break;
                 default:
                     break;
@@ -358,6 +369,169 @@ namespace AlgDS_Praktikum_Gruppe9
                     case 6:
                         Programmstart();
                         break;
+                    default:
+                        break;
+                }
+            }
+        }
+        public static void TestBinSearchTree()
+        {
+
+            BinSearchTree binSearchTree = new BinSearchTree();
+
+            bool repeat = true;
+
+            while (repeat)
+            {
+                Console.Write("Wählen Sie eine Funktion: \n1: Einfügen\n2: Löschen\n3: Suchen\n4: Ausgeben\n5: Automatische Baum Generieren \n6: Züruck zum Hauptmenü \nIhre Auswahl: ");
+                int auswahl = Convert.ToInt32(Console.ReadLine());
+                Console.Clear();
+                Console.Clear();
+                switch (auswahl)
+                {
+                    case 1:
+                        Console.Write("Welchen Wert wollen Sie Einfügen: ");
+                        string eingabe1 = Console.ReadLine();
+                        int auswahl1 = Convert.ToInt32(eingabe1);
+                        binSearchTree.insert(auswahl1);
+                        break;
+                    case 2:
+                        Console.Write("Welchen Wert wollen Sie Löschen: ");
+                        string eingabe2 = Console.ReadLine();
+                        int auswahl2 = Convert.ToInt32(eingabe2);
+                        binSearchTree.delete(auswahl2);
+                        break;
+                    case 3:
+                        Console.Write("Welchen Wert wollen Sie Suchen: ");
+                        string eingabe3 = Console.ReadLine();
+                        int auswahl3 = Convert.ToInt32(eingabe3);
+                        Console.WriteLine(binSearchTree.search(auswahl3));
+                        break;
+                    case 4:
+                        binSearchTree.print();
+                        break;
+                    case 5:
+                        Console.Write("Wie Lange soll die Generierte Liste sein: ");
+                        string eingabe5 = Console.ReadLine();
+                        int auswahl5 = Convert.ToInt32(eingabe5);
+                        Random rnd = new Random();
+                        for (int i = 0; i < auswahl5; i++)
+                        {
+                            binSearchTree.insert(rnd.Next(0, 9));
+                        }
+                        break;
+                    case 6:
+                        Programmstart();
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
+        public static void TestAVLTree()
+        {
+            AVLTree binSearchTree = new AVLTree();
+
+            bool repeat = true;
+
+            while (repeat)
+            {
+                Console.Write("Wählen Sie eine Funktion: \n1: Einfügen\n2: Löschen\n3: Suchen\n4: Ausgeben\n5: Automatische Baum Generieren \n6: Züruck zum Hauptmenü \nIhre Auswahl: ");
+                int auswahl = Convert.ToInt32(Console.ReadLine());
+                Console.Clear();
+                Console.Clear();
+                switch (auswahl)
+                {
+                    case 1:
+                        Console.Write("Welchen Wert wollen Sie Einfügen: ");
+                        string eingabe1 = Console.ReadLine();
+                        int auswahl1 = Convert.ToInt32(eingabe1);
+                        binSearchTree.insert(auswahl1);
+                        break;
+                    case 2:
+                        Console.Write("Welchen Wert wollen Sie Löschen: ");
+                        string eingabe2 = Console.ReadLine();
+                        int auswahl2 = Convert.ToInt32(eingabe2);
+                        binSearchTree.delete(auswahl2);
+                        break;
+                    case 3:
+                        Console.Write("Welchen Wert wollen Sie Suchen: ");
+                        string eingabe3 = Console.ReadLine();
+                        int auswahl3 = Convert.ToInt32(eingabe3);
+                        Console.WriteLine(binSearchTree.search(auswahl3));
+                        break;
+                    case 4:
+                        binSearchTree.print();
+                        break;
+                    case 5:
+                        Console.Write("Wie Lange soll die Generierte Liste sein: ");
+                        string eingabe5 = Console.ReadLine();
+                        int auswahl5 = Convert.ToInt32(eingabe5);
+                        Random rnd = new Random();
+                        for (int i = 0; i < auswahl5; i++)
+                        {
+                            binSearchTree.insert(rnd.Next(0, 9));
+                        }
+                        break;
+                    case 6:
+                        Programmstart();
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
+        public static void TestTreap()
+        {
+            Treap treap = new Treap();
+
+
+            bool repeat = true;
+
+            while (repeat)
+            {
+                Console.Write("Wählen Sie eine Funktion: \n1: Einfügen\n2: Löschen\n3: Suchen\n4: Ausgeben\n5: Automatische Baum Generieren \n6: Züruck zum Hauptmenü \nIhre Auswahl: ");
+                int auswahl = Convert.ToInt32(Console.ReadLine());
+                Console.Clear();
+                Console.Clear();
+                switch (auswahl)
+                {
+                    case 1:
+                        Console.Write("Welchen Wert wollen Sie Einfügen: ");
+                        string eingabe1 = Console.ReadLine();
+                        int auswahl1 = Convert.ToInt32(eingabe1);
+                        treap.insert(auswahl1);
+                        break;
+                    case 2:
+                        Console.Write("Welchen Wert wollen Sie Löschen:");
+                        string eingabe2 = Console.ReadLine();
+                        int auswahl2 = Convert.ToInt32(eingabe2);
+                        treap.delete(auswahl2);
+                        break;
+                    case 3:
+                        Console.Write("Welchen Wert wollen Sie Suchen: ");
+                        string eingabe3 = Console.ReadLine();
+                        int auswahl3 = Convert.ToInt32(eingabe3);
+                        Console.WriteLine(treap.search(auswahl3));
+                        break;
+                    case 4:
+                        treap.print();
+                        break;
+                    case 5:
+                        Console.Write("Wie Lange soll die Generierte Liste sein: ");
+                        string eingabe5 = Console.ReadLine();
+                        int auswahl5 = Convert.ToInt32(eingabe5);
+                        Random rnd = new Random();
+                        for (int i = 0; i < auswahl5; i++)
+                        {
+                            treap.insert(rnd.Next(0, 9));
+                        }
+                        break;
+                    case 6:
+                        Programmstart();
+                        break;
+
+
                     default:
                         break;
                 }
